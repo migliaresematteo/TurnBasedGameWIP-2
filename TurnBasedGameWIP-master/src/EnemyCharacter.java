@@ -11,14 +11,14 @@ public class EnemyCharacter extends Enemies {
         this.multiplier = multiplier;
     }
     public void getDamage(AllyCharacter ally) {
-        int EnemyLevel = ally.getCharacterLevel();
+        int AllyLevel = ally.getCharacterLevel();
         double randomMultiplier = (Math.random() * 10);
-        this.characterHP -= ally.getMultiplier() * EnemyLevel + randomMultiplier;
+        this.characterHP -= ally.getMultiplier() * AllyLevel + randomMultiplier;
     }
     public void getAbilityDamage(AllyCharacter ally) {
-        int EnemyLevel = ally.getCharacterLevel();
+        int AllyLevel = ally.getCharacterLevel();
         double randomMultiplier = (Math.random() * 15);
-        this.characterHP -= ally.getMultiplier() * EnemyLevel + 2.5 + randomMultiplier;
+        this.characterHP -= ally.getMultiplier() * AllyLevel + 2.5 + randomMultiplier;
     }
     public void dealDamage(AllyCharacter ally) {
         ally.getDamage(this);
